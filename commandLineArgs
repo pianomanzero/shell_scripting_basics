@@ -1,0 +1,10 @@
+#!/bin/bash
+#handling arguments passed at the command line 
+#
+echo "The total number of args passed to this script are $#"
+echo "$0 is the script name"
+echo "$1 is the first arg"
+echo "$2 is the second arg"
+echo "All of them are: - $* or $@"
+exit 0
+

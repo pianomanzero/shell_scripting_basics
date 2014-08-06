@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#nested for loops
+#
+
+for (( i = 1; i <= 5; i++ ))  ##outer for loop##
+  do
+    for (( j = 1 ; j <= 5 ; j++ )) ##inner for loop##
+      do
+        echo -n "$i"
+    done
+  echo "" ##prints new line ##
+done

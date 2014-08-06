@@ -1,0 +1,10 @@
+#! /bin/bash
+clear
+echo "Hello $USER $USERNAME"
+echo "OS: $OSTYPE"
+echo "Your shell is: $SHELL"
+echo "Today is ";date
+cal
+echo "The number of users currently logged in : ";who | wc -l
+who
+exit 0

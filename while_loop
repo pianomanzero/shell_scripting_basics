@@ -1,0 +1,14 @@
+#!/bin/bash
+#illustrating a while loop
+
+echo "Guess the secret word: telephone, iguana, gallon, Godzilla"
+
+read GUESS
+
+while [ $GUESS != "Godzilla" ]
+do
+  echo "Incorrect - guess again."
+  read GUESS
+done
+
+echo "Correct. Have a good day!"

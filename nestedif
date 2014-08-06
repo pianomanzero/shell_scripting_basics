@@ -1,0 +1,27 @@
+#!/bin/bash
+#nested if statements
+
+echo "1- UNIX (Sun, BSD)"
+echo "2- Linux (Debian, Ubuntu, RHEL)"
+echo "3- Windoze"
+echo -n "Select your OS [1 - 3]"
+read osch
+
+if [ $osch -eq 1 ]
+  then
+    echo "You picked UNIX"
+else
+    if [ $osch -eq 3 ]
+      then
+        echo "Ummmm... how about no."
+        exit 1
+    fi
+
+    if [ $osch -eq 2 ]
+      then
+        echo "You picked Linux. Good choice"
+      else
+        echo "Okay, UNIX is a good choice"
+    fi
+    exit 0
+fi

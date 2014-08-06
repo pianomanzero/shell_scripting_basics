@@ -1,0 +1,16 @@
+#!/bin/bash
+#demonstrates until loops
+#similar to for loop except will continue to iterate until a specific condition is met
+#as opposed to watching a condition for a change.
+
+echo "Guess the secret word: telephone, iguana, gallon, Godzilla"
+read GUESS
+
+until [ $GUESS = "Godzilla" ]
+do
+  echo "Incorrect - guess again"
+  read GUESS
+done
+
+echo "Correct!"
+
