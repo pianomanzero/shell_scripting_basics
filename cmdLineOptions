@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#getting command line options (passed to command with '-')
+
+SECS=0
+MINUTES=0
+HOURS=0
+DAYS=0
+
+while getopts :s:m:h:d: TIMED 2> /dev/null
+  do
+    case $TIMED in
+      s) SECS=$OPTARG
+        ;;
+      m) (( MINUTES = $OPTARG * 60 ))
+        ;;
+      h) (( HOURS = $OPTARG * 3600 ))
+        ;;
+      d) (( DAYS = $OPTARG * 86400 ))
+        ;;
+      \?) usage
+        exit 1
+        ;;
+      esac
+  done
+  (( TOTAL_SECONDS =  SECONDS + MINUTES + HOURS + DAYS ))
+  echo $TOTAL_SECONDS
