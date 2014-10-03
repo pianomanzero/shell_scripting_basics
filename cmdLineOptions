@@ -24,4 +24,4 @@ while getopts :s:m:h:d: TIMED 2> /dev/null
       esac
   done
   (( TOTAL_SECONDS =  SECONDS + MINUTES + HOURS + DAYS ))
-  echo $TOTAL_SECONDS
+  echo "Total seconds = $TOTAL_SECONDS"
